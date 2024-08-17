@@ -6,15 +6,21 @@ import { MyTask } from './Components/MyTask';
 
 
 const tasks = [
-  {text : "Llorar con la llorona",
-   completed : true
-  },
-  {text : "Bailar con Michael Jackson",
-    completed : false
-   },
-   {text : "Comerme un tiburon",
+  {
+    id:0,
+    text : "Llorar con la llorona",
     completed : true
-   }
+  },
+  {
+    id:1,
+    text : "Bailar con Michael Jackson",
+    completed : false
+  },
+  {
+    id:2,
+    text : "Comerme un tiburon",
+    completed : true
+  }
 ]
 
 let completed = 0 
@@ -29,7 +35,7 @@ function App() {
       
       <MyTaskList>
       {tasks.map(task => (
-      <MyTask key={task.text} text={task.text}/>   
+      <MyTask key={task.id} text={task.text}/>   
       ))}
       </MyTaskList>
     
